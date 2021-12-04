@@ -1,0 +1,32 @@
+//Variables
+@import 'variables';
+
+//Normalize
+@import '~normalize-scss/sass/normalize.scss';
+
+//Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Font-awesome
+@import '~font-awesome/scss/font-awesome.scss';
+
+//Font Awesome
+@import 'font-awesome/all.min.scss';
+
+//Select Bootstrap
+@import '~bootstrap-select/sass/bootstrap-select';
+
+//Datetimepicker
+@import '~@eonasdan/tempus-dominus/src/sass/tempus-dominus.scss';
+
+//Sweetalert2
+@import '~sweetalert2/src/sweetalert2';
+
+//toastedjs
+@import '~toastedjs/dist/toasted.min.css';
+
+//Animate
+@import 'animate/jquery.animate.scss';
+
+//Style
+@import 'other/app.scss';
