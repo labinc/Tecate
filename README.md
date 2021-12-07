@@ -1,4 +1,4 @@
-## About Laravel
+## Instalación
 
  1. Descargar o clonar el repositorio en la carpeta laragon/www dentro de una carpeta vacia.
  2. Abrir Laragon y crear el subdominio local para el proyecto
