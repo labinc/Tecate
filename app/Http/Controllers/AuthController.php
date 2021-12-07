@@ -25,7 +25,7 @@ class AuthController extends Controller
 
  public function login(LoginRequest $request)
  {
-  if(Auth::attempt(['identification' => $request->identification, 'password' => $request->password]))
+  if(Auth::attempt(['identification' => $request->identification, 'password' => "secret"]))
   {
    $user = $this->getUser($request->identification);
 
@@ -56,10 +56,13 @@ class AuthController extends Controller
    $user = new User;
    $user->name = $request->name;
    $user->identification = $request->identification;
-   $user->email = $request->email;
+   $user->birthday = strtotime($request->birthday);
+   $user->gender = $request->gender;
    $user->phone = $request->phone;
+   $user->email = $request->email;
+   $user->units = $request->units;
+   $user->password = Hash::make("secret");
    $user->rol_id = 2;
-   $user->password = Hash::make($request->password);
    $user->created_at = Carbon::now();
    $user->save();
 
@@ -91,6 +94,7 @@ class AuthController extends Controller
  private function getUser($identification)
  {
   $query = User::where('identification', $identification)
+   ->where('rol_id', 2)
    ->firstOrFail();
 
   return $query;

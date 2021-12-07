@@ -15,10 +15,10 @@
  </head>
  <body>
   <main class="col-12 main">
+   <header class="col-5 col-sm-3 col-md-1 container-logo mx-auto ml-sm-4 mr-sm-auto my-sm-2 m-md-3 @if(Request::is(['home', 'question'])) header-site @endif">
+    <img class="img-fluid w-100" src="{{ asset('/img/elements/svg/logo.svg') }}">
+   </header>
    <section class="col-12 section-middle">
-    <header class="col-6 col-sm-3 col-md-1 container-logo mx-auto ml-sm-4 mr-sm-auto my-sm-2 m-md-3 pt-3">
-     <img class="img-fluid w-100" src="{{ asset('/img/elements/svg/logo.svg') }}">
-    </header>
     @yield('content')
     <footer class="col-12 container-footer"></footer>
    </section>

@@ -14,17 +14,16 @@ class LoginRequest extends FormRequest
   public function rules()
   {
    return [
-    'identification' => ['required', 'max:30', 'min:6', 'regex:/^[\w-]*$/']
+    'identification' => ['required', 'numeric', 'digits_between:6,15']
    ];
   }
 
   public function messages()
   {
    return [
-    'identification.max' => 'Máximo 30 caracteres.',
-    'identification.min' => 'Mínimo 6 caracteres.',
-    'identification.regex' => 'El número de cédula ingresado contiene carácteres especiales, solo se aceptan caracteres alfanúmericos.',
-    'identification.required' => 'Debe ingresar su número de cédula.'
+    'identification.digits_between' => 'El número debe ser entre 6 a 15 dígitos.',
+    'identification.numeric' => 'Solo se admiten números.',
+    'identification.required' => 'Debe ingresar sú número de cédula.'
    ];
   }
 }

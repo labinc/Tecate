@@ -8,7 +8,7 @@ class Result extends Model
 {
  protected $table = 'results';
 
- protected $fillable = [ 'user_id', 'question_id', 'answer_id' ];
+ protected $fillable = [ 'batch_id', 'question_id', 'answer_id', 'score' ];
 
  public function answer(){
   return $this->belongsTo(Answer::class);
@@ -18,7 +18,7 @@ class Result extends Model
   return $this->belongsTo(Question::class);
  }
 
- public function user(){
-  return $this->belongsTo(User::class);
+ public function batch(){
+  return $this->belongsTo(Batch::class);
  }
 }

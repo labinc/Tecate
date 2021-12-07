@@ -14,6 +14,24 @@ class Base
   }
  }
 
+ disableForm()
+ {
+  if(document.body.contains(document.querySelector('#formQuestion')))
+  {
+   const formQuestion = document.querySelector('#formQuestion');
+
+   formQuestion.addEventListener('submit', () => {
+/*     document.querySelector("button[type='submit']").disabled = true; */
+
+    document.querySelectorAll('.btn-answer').forEach(item => {
+     item.addEventListener('click', event => {
+      item.setAttribute("disabled", "disabled");
+     })
+    })
+   });
+  }
+ }
+
  logout()
  {
   const token = document.querySelector("meta[name='csrf-token']").getAttribute("content");
@@ -117,6 +135,7 @@ window.onload = () => {
  let base = new Base();
 
  base.disableButton();
+ base.disableForm();
  base.logout();
  base.selectDate();
 };

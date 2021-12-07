@@ -1,15 +1,15 @@
 @extends('layouts.inicio')
 @section('content')
  <article class="col-12 col-sm-10 col-md-6 animated fadeInLeft d-none d-sm-block z-2">
-  <div class="col-12 col-md-9 mx-auto p-0">
+  <div class="col-12 col-sm-11 col-md-9 mx-auto p-0">
    <img class="img-fluid w-100" src="{{ asset('/img/elements/png/can_2.png') }}">
   </div>
  </article>
  <article class="col-12 col-md-6 animated fadeInRight z-2">
-  <div class="col-10 col-sm-8 col-md-7 mx-auto p-0">
+  <div class="col-10 col-sm-7 col-md-7 mt-3 mt-md-0 mx-auto p-0">
    <img class="img-fluid w-100" src="{{ asset('/img/elements/svg/title_1.svg') }}">
   </div>
-  <form class="col-12 mx-auto my-5 my-md-4 row" id="formLogin" method="post" action="{{ route('login') }}">
+  <form class="col-12 mx-auto my-5 my-md-4 row" id="formLogin" method="post" action="{{ route('register') }}">
    @csrf
    <div class="col-12 col-md-6 p-0">
     <div class="col-11 mx-auto my-1 px-0">
@@ -29,7 +29,7 @@
      {!! $errors->first('gender', '<p class="form-error font-size-1">:message</p>') !!}
     </div>
     <div class="col-11 mx-auto my-1 px-0">
-     <input class="form-control {{ $errors->has('units') ? 'is-invalid' : '' }}" type="text" title="Ingrese las unidades de compra" placeholder="UNIDADES DE COMPRA*" maxlength="500" id="units" name="units" value="{{ old('units') }}">
+     <input class="form-control {{ $errors->has('units') ? 'is-invalid' : '' }}" type="text" title="Ingrese las unidades de compra" placeholder="UNIDADES DE COMPRA*" maxlength="500" id="units" name="units" value="{{ old('units') }}" required>
      {!! $errors->first('units', '<p class="form-error font-size-1">:message</p>') !!}
     </div>
    </div>
@@ -40,7 +40,7 @@
     </div>
     <div class="col-11 mx-auto my-1 px-0" id="date_birthday">
      <div class="input-group" data-td-target-input="nearest" data-td-target-toggle="nearest">
-      <input class="form-control readonly small {{ $errors->has('birthday') ? 'is-invalid' : '' }}" type="text" data-td-target="#date_birthday" title="Ingrese su fecha de nacimiento" placeholder="FECHA DE NACIMIENTO*" id="birthday" name="birthday" required>
+      <input class="form-control readonly small {{ $errors->has('birthday') ? 'is-invalid' : '' }}" type="text" data-td-target="#date_birthday" title="Ingrese su fecha de nacimiento" placeholder="FECHA DE NACIMIENTO" id="birthday" name="birthday">
       <span class="input-group-text" data-td-target="#date_birthday" data-td-toggle="datetimepicker">
        <i class="fa fa-calendar"></i>
       </span>

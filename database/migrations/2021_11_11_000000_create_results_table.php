@@ -17,7 +17,7 @@ class CreateResultsTable extends Migration
 
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')
+            $table->foreignId('batch_id')
              ->nullable()
              ->constrained()
              ->onDelete('SET NULL');
@@ -25,10 +25,11 @@ class CreateResultsTable extends Migration
              ->nullable()
              ->constrained()
              ->onDelete('SET NULL');
-             $table->foreignId('answer_id')
+            $table->foreignId('answer_id')
              ->nullable()
              ->constrained()
              ->onDelete('SET NULL');
+            $table->integer('score');
             $table->timestamps();
         });
     }

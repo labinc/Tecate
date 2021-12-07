@@ -10,6 +10,10 @@ class Question extends Model
 
  protected $fillable = [ 'statement', 'state' ];
 
+ public function answer_fine(){
+  return $this->hasOne(Answer::class)->where('veracity', 'Si');
+ }
+
  public function answers(){
   return $this->hasMany(Answer::class);
  }
