@@ -244,8 +244,15 @@ html
   font-size: .70rem !important;
  }
 
+ select{
+    padding-bottom: 0;
+    height: 36px;
+    padding-top: 1px;
+ }
+
  select:invalid{
-  font-size: .95rem !important;
+  font-size: .75rem !important;
+  color: grey;
  }
 
  select option:disabled{
@@ -315,8 +322,15 @@ html
   font-size: .71rem !important;
  }
 
+ select{
+    padding-bottom: 0 !important;
+    height: 36px !important;
+    padding-top: 1px !important;
+ }
+
  select:invalid{
-  font-size: .96rem !important;
+  font-size: .75rem !important;
+  color: grey;
  }
 
  select option:disabled{
@@ -386,8 +400,16 @@ html
   font-size: .72rem !important;
  }
 
+  select{
+    padding-bottom: 0 !important;
+    height: 36px !important;
+    padding-top: 1px !important;
+ }
+
+
  select:invalid{
-  font-size: .97rem !important;
+  font-size: .75rem !important;
+  color: grey;
  }
 
  select option:disabled{
@@ -457,8 +479,15 @@ html
   font-size: .63rem !important;
  }
 
+ select{
+    padding-bottom: 0 !important;
+    height: 36px !important;
+    padding-top: 1px !important;
+ }
+
  select:invalid{
-  font-size: .88rem !important;
+  font-size: .65rem !important;
+  color: grey;
  }
 
  select option:disabled{
@@ -532,8 +561,16 @@ html
   font-size: .62rem !important;
  }
 
+ select{
+    padding-bottom: 0 !important;
+    height: 36px !important;
+    padding-top: 1px !important;
+ }
+
+
  select:invalid{
-  font-size: .87rem !important;
+  font-size: .65rem !important;
+  color: gray;
  }
 
  select option:disabled{
@@ -607,8 +644,16 @@ html
   font-size: .6rem !important;
  }
 
+ select{
+    padding-bottom: 0 !important;
+    height: 36px !important;
+    padding-top: 1px !important;
+ }
+
+
  select:invalid{
-  font-size: .85rem !important;
+  font-size: .65rem !important;
+  color: grey;
  }
 
  select option:disabled{
